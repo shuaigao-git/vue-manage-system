@@ -8,6 +8,7 @@ import 'element-plus/dist/index.css';
 import './assets/css/icon.css';
 
 const app = createApp(App);
+// 使用Pinia状态管理库
 app.use(createPinia());
 app.use(router);
 
@@ -15,6 +16,7 @@ app.use(router);
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
     app.component(key, component);
 }
+
 // 自定义权限指令
 const permiss = usePermissStore();
 app.directive('permiss', {
